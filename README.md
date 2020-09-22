@@ -1,1 +1,1 @@
-# gijutsuryoku
+# 技術力調査
