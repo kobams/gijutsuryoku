@@ -63,12 +63,14 @@ require './header.php';
 
 </table>
 
-<form action="form.php" method="post">
-    <input type="submit" value="修正">
-</form>
+<div class="buttonwrapper">
+    <form action="form.php" method="post" class="button">
+        <input type="submit" value="修正">
+    </form>
 
-<form action="complete.php" method="post">
-    <input type="submit" value="送信">
-</form>
+    <form action="complete.php" method="post" class="button">
+        <input type="submit" value="送信">
+    </form>
+</div>
 
 <?php require './footer.php';

@@ -21,36 +21,38 @@ require './header.php';
 <h2>お問い合わせ</h2>
 <form action="confirm.php" method="post">
     <div>
-        <label for="kenmei">件名</label>
-        <select id="kenmei" name="kenmei">
-            <option value="ご意見" <?php if(strcmp($kenmei, 'ご意見') == 0) echo 'selected'; ?> >ご意見</option>
-            <option value="ご感想" <?php if(strcmp($kenmei, 'ご感想') == 0) echo 'selected'; ?> >ご感想</option>
-            <option value="その他" <?php if(strcmp($kenmei, 'その他') == 0) echo 'selected'; ?> >その他</option>
-        </select>
+        <label for="kenmei">件名(必須)</label>
+        <div class="selectwrapper">
+            <select id="kenmei" name="kenmei">
+                <option value="ご意見" <?php if(strcmp($kenmei, 'ご意見') == 0) echo 'selected'; ?>>ご意見</option>
+                <option value="ご感想" <?php if(strcmp($kenmei, 'ご感想') == 0) echo 'selected'; ?>>ご感想</option>
+                <option value="その他" <?php if(strcmp($kenmei, 'その他') == 0) echo 'selected'; ?>>その他</option>
+            </select>
+        </div>
     </div>
 
     <div>
-        <label for="name">お名前</label>
+        <label for="name">お名前(必須)</label>
+        <?php if($error['name']) echo '<label for="name" class="error">　*入力エラーがあります</label>'; ?>
         <input type="text" id="name" name="name" <?php echo 'value=', $name; ?>>
-        <?php if($error['name']) echo '<label for="name"> *入力エラーがあります</label>'; ?>
     </div>
 
     <div>
-        <label for="email">メールアドレス</label>
+        <label for="email">メールアドレス(必須)</label>
+        <?php if($error['email']) echo '<label for="email" class="error">　*入力エラーがあります</label>'; ?>
         <input type="email" id="email" name="email" <?php echo 'value=', $email; ?>>
-        <?php if($error['email']) echo '<label for="email"> *入力エラーがあります</label>'; ?>
     </div>
 
     <div>
-        <label for="tel">電話番号(数字のみ)</label>
+        <label for="tel">電話番号(数字のみ)(必須)</label>
+        <?php if($error['tel']) echo '<label for="tel" class="error">　*入力エラーがあります</label>'; ?>
         <input type="tel" id="tel" name="tel" <?php echo 'value=', $tel; ?>>
-        <?php if($error['tel']) echo '<label for="tel"> *入力エラーがあります</label>'; ?>
     </div>
 
     <div>
-        <label for="message">お問い合わせ内容(300文字以内)</label>
+        <label for="message">お問い合わせ内容(300文字以内)(必須)</label>
+        <?php if($error['message']) echo '<label for="message" class="error">　*入力エラーがあります</label>'; ?>
         <textarea id="message" name="message"><?php echo $message; ?></textarea>
-        <?php if($error['message']) echo '<label for="message"> *入力エラーがあります</label>'; ?>
     </div>
 
     <input type="submit" value="確認">
