@@ -5,8 +5,8 @@ form.php：フォームを入力するページ
 confirm.php：入力内容の確認ページ  
 complete.php：メール送信とデータベース登録を行うページ  
 css：cssファイルのフォルダ  
-sql：データベースを作成するために実行したSQL(database:example、table:contact)
-database：動作テストで作成されたデータベース
+sql：データベースを作成するために実行したSQL(database:example、table:contact)  
+database：動作テストで作成されたデータベース  
 
 ## 開発環境
 開発環境  
