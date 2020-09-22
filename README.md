@@ -31,7 +31,7 @@ database：動作テストで作成されたデータベース
 書籍  
 ・1冊ですべて身につくHTML&CSSとWebデザイン入門講座  
 ・確かな力が身につくPHP「超」入門  
-サイト
+サイト  
 ・https://www.webdesignleaves.com/pr/php/php_contact_form_02.php  
 ・https://qiita.com/7968/items/ce03feb17c8eaa6e4672  
 ・https://techacademy.jp/magazine/11629  
